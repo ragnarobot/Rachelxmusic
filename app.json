@@ -1,0 +1,99 @@
+{
+    "name": "ALBYMusic",
+    "description": "Music allow you to stream music trought the telegram voice chat feature.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/PunyaAlby/ALBYMusic",
+    "stack": "container",
+    "env": {
+        "SESSION_NAME": {
+            "description": "Dapatkan String Session Pyrogram di Web » replit.com/@Itz-zaid/Generator",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "Dapatkan ID Akun Telegram Anda dari » @userinfobot di telegram Sebagai Owner(Pemilik) Bot",
+            "required": true,
+            "value": "1663258664"
+        },
+        "ASS_ID": {
+            "description": "Dapatkan ID Akun Telegram Anda dari » @userinfobot di telegram Sebagai Akun Assisten",
+            "required": true,
+            "value": ""
+        },
+        "LOG_GROUP_ID": {
+            "description": "Buat Grup Pribadi Dan Tambahkan Bot Rose & Bot Musik Anda Sebagai Admin Lalu Ketikan /id",
+            "required": true,
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Dapatkan API ID di web » my.telegram.org",
+            "required": true,
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Dapatkan API Hash di web » my.telegram.org",
+            "required": true,
+            "value": ""
+        },
+        "HEROKU_API_KEY": {
+            "description": "Ambil Heroku API KEY Anda disini » https://dashboard.heroku.com/account",
+            "value": "",
+            "required": false
+        },
+        "HEROKU_APP_NAME": {
+           "description": "Masukan Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+           "value": "",
+           "required": false
+        },
+        "GROUP": {
+            "description": "Isi Dengan Username Group Tanpa @",
+            "required": true,
+            "value": "ruangdiskusikami"
+        },
+         "CHANNEL": {
+            "description": "Isi Dengan Username Channel Tanpa @",
+            "required": true,
+            "value": "ruangprojects"
+        },
+        "SUDO_USERS": {
+            "description": "isi dengan user id yang dapat mengakses semua fungsi di bot anda (dipisahkan dengan spasi).",
+            "required": true,
+            "value": "1663258664"
+        },
+        "DURATION_LIMIT": {
+            "description": "Jangan diubah ini!!",
+            "required": true,
+            "value": "3600"
+        },
+        "BOT_TOKEN": {
+            "description": "Dapatkan Bot Token Anda dari @BotFather di telegram",
+            "required": true,
+            "value": ""
+        },
+        "UPSTREAM_REPO": {
+            "description": "Jika Anda tidak tahu ini, Biarkan apa adanya tidak perlu diisi dan bisa di /skip",
+            "value": "https://github.com/PunyaAlby/ALBYMusic",
+            "required": true
+        },
+        "UPSTREAM_BRANCH": {
+            "description": "Nama Cabang Repo jika anda tidak tau tidak perlu diisi dan bisa di /skip",
+            "value": "master",
+            "required": true
+        },
+        "MONGO_DB_URI": {
+            "description": "Isi Dengan Url Mongodb Dapatkan dari » mongodb.cloud.com",
+            "required": true,
+            "value": ""
+        }
+    },
+    "buildpacks": [{
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }, {
+      "url": "heroku/python"
+    }],
+    "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
